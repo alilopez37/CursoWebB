@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import Header from "../components/atoms/Header";
 import ListStudent from "../components/molecules/ListStudent";
 
-function App(){
+function Home(){
     const listStudent = [
         {
             id: 1,
@@ -24,8 +25,9 @@ function App(){
         <>
             <Header/>
             <ListStudent listStudent={listStudent}></ListStudent>
+            <Link to="/login">Iniciar sesión</Link>
         </>
     )
 }
 
-export default App;
+export default Home;

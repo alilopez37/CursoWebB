@@ -7,7 +7,7 @@ function ListStudent({listStudent}) {
             <Title msn="Lista de alumnos del 4B"></Title>
             {
                 listStudent.map(itemStudent => (
-                    <Widge item={itemStudent}></Widge>
+                    <Widge key={itemStudent.id} item={itemStudent}></Widge>
                 )
                 )
             }
