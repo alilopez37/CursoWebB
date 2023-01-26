@@ -4,13 +4,15 @@ import Logo from '../../assets/react.svg'
 function FormLogin() {
     //const [description, setDescription] = useState({msn: "CC", v : 1})
     //const [username, setUsername] = useState('')
-    const [stateForm, setStateForm] = useState({username:'', password:''})
+    const [stateForm, setStateForm] = useState({username:'Samuel', password:''})
     const handlerClick = (e) => {
         e.preventDefault()
         setDescription({msn: username})    
     }
     const handlerChange = (e) => {
-        setStateForm({...stateForm,username:e.target.value})
+        console.log(stateForm.username)
+        setStateForm({...stateForm,username:"Manuel"})
+        console.log(stateForm.username)
     }
     const handlerChangePassword = (e) => {
         setStateForm({...stateForm,password: e.target.value})
