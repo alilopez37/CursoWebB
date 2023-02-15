@@ -26,6 +26,7 @@ function Home(){
             <Header/>
             <ListStudent listStudent={listStudent}></ListStudent>
             <Link to="/login">Iniciar sesión</Link>
+            <Link to="/rickandmorty">Rick and Morty</Link>
         </>
     )
 }
