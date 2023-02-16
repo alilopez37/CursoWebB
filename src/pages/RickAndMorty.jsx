@@ -1,10 +1,9 @@
-import { useNavigate, Navigate } from "react-router-dom";
 import ListaPersonajes from "../components/organism/ListaPersonajes";
 
-function RickAndMorty({isLoged}) {
+function RickAndMorty() {
     return (
-        isLoged ? (<ListaPersonajes/>) : (<Navigate to="/login"/>) 
-        );
+        <ListaPersonajes/>
+    );
         
 }
 

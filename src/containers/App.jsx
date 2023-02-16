@@ -6,6 +6,8 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import FlexBox from '../components/molecules/FlexBox';
 import RickAndMorty from '../pages/RickAndMorty';
+import ProtectedParentRoute from './ProtectedParentRoute';
+
 
 function App() {
     const [isLoged, setIsLoged] = useState(false)
@@ -13,13 +15,15 @@ function App() {
         <BrowserRouter>
             <UserContext.Provider value={{isLoged, setIsLoged}}>
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
+                    <Route index element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>
-                    <Route path='/register' element={<Register/>}/>
-                    <Route path='/flexbox' element={<FlexBox/>}/>
-                    <Route path='/rickandmorty' 
-                        element={<RickAndMorty isLoged={isLoged}/>}
-                    />
+                    <Route element={<ProtectedParentRoute isLoged={isLoged}/>}>
+                        <Route path='/register' element={<Register/>}/>
+                        <Route path='/flexbox' element={<FlexBox/>}/>
+                        <Route path='/rickandmorty' element={<RickAndMorty/>}
+                        />
+                    </Route>
+                   
                 </Routes>
             </UserContext.Provider>
         </BrowserRouter>

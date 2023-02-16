@@ -27,6 +27,9 @@ function Home(){
             <ListStudent listStudent={listStudent}></ListStudent>
             <Link to="/login">Iniciar sesión</Link>
             <Link to="/rickandmorty">Rick and Morty</Link>
+            <div>
+                <Link to="/prueba">Prueba</Link>
+            </div>
         </>
     )
 }
